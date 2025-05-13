@@ -21,10 +21,10 @@
   <script>
     window.onload = function () {
       const ua = navigator.userAgent.toLowerCase();
-      const isInApp = ua.includes("tiktok") || ua.includes("instagram") || ua.includes("fb");
-      
+      const isInApp =
+        ua.includes("tiktok") || ua.includes("instagram") || ua.includes("fb");
+
       if (!isInApp) {
-        // Только если не в приложении, делаем редирект
         window.location.href = "https://beacons.ai/tg__gowero77";
       }
     };
@@ -34,4 +34,5 @@
   <div class="bg"></div>
 </body>
 </html>
+
 
