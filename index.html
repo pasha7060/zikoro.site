@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Open in browser</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+  <img src="open_browser.jpg" alt="Open in browser">
+  <script>
+    // Определяем, открыт ли сайт в браузере
+    const isInApp = /TikTok|FBAN|FBAV|Instagram|Line|Messenger|Snapchat/i.test(navigator.userAgent);
+
+    // Если в браузере — делаем редирект
+    if (!isInApp) {
+      window.location.href = "https://beacons.ai/tg__gowero77";
+    }
+  </script>
+</body>
+</html>
