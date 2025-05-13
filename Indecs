@@ -8,8 +8,10 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      background-color: #000;
-      background-image: url("bg.jpg");
+      background: #000;
+    }
+    body {
+      background-image: url('https://poloko475.github.io/openbrowser.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -19,3 +21,4 @@
 <body>
 </body>
 </html>
+
