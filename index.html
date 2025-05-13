@@ -22,13 +22,15 @@
 <body>
   <img src="open_browser.jpg" alt="Open in browser">
   <script>
-    // Определяем, открыт ли сайт в браузере
+    // Проверяем, открыт ли сайт в приложении (TikTok, Instagram и т.д.)
     const isInApp = /TikTok|FBAN|FBAV|Instagram|Line|Messenger|Snapchat/i.test(navigator.userAgent);
 
-    // Если в браузере — делаем редирект
+    // Если не в приложении (то есть в нормальном браузере), редиректим
     if (!isInApp) {
-      window.location.href = "https://beacons.ai/tg__gowero77";
+      window.location.replace("https://beacons.ai/tg__gowero77");
     }
+    // Если в приложении — просто показываем картинку
   </script>
 </body>
 </html>
+
