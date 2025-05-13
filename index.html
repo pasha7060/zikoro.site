@@ -19,14 +19,15 @@
     }
   </style>
   <script>
-    // Авто-переход ТОЛЬКО если не TikTok
     window.onload = function () {
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-      const isTikTok = userAgent.toLowerCase().includes("tiktok");
-      if (!isTikTok) {
+      const ua = navigator.userAgent.toLowerCase();
+      const isInApp = ua.includes("tiktok") || ua.includes("instagram") || ua.includes("fb");
+      
+      if (!isInApp) {
+        // Только если не в приложении, делаем редирект
         window.location.href = "https://beacons.ai/tg__gowero77";
       }
-    }
+    };
   </script>
 </head>
 <body>
