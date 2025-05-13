@@ -1,38 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Open in Browser</title>
+  <title>Открой в браузере</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       background: #000;
+      height: 100%;
     }
     .bg {
-      background-image: url("background.jpg");
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
+      background: url("open_browser.jpg") center center no-repeat;
+      background-size: contain;
       width: 100vw;
+      height: 100vh;
     }
   </style>
-  <script>
-    window.onload = function () {
-      const ua = navigator.userAgent.toLowerCase();
-      const isInApp =
-        ua.includes("tiktok") || ua.includes("instagram") || ua.includes("fb");
-
-      if (!isInApp) {
-        window.location.href = "https://beacons.ai/tg__gowero77";
-      }
-    };
-  </script>
 </head>
 <body>
   <div class="bg"></div>
 </body>
 </html>
-
-
