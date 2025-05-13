@@ -15,22 +15,24 @@
     img {
       width: 100%;
       height: auto;
-      max-width: 500px;
+      max-width: 600px;
     }
   </style>
 </head>
 <body>
   <img src="open_browser.jpg" alt="Open in browser">
   <script>
-    // Проверяем, открыт ли сайт в приложении (TikTok, Instagram и т.д.)
-    const isInApp = /TikTok|FBAN|FBAV|Instagram|Line|Messenger|Snapchat/i.test(navigator.userAgent);
+    // Проверяем: открыт ли сайт во "встроенном" браузере (внутри приложения)
+    const inAppBrowser = /TikTok|Instagram|FBAN|FBAV|Messenger|Line|Snapchat/i.test(navigator.userAgent);
 
-    // Если не в приложении (то есть в нормальном браузере), редиректим
-    if (!isInApp) {
-      window.location.replace("https://beacons.ai/tg__gowero77");
+    // Только если НЕ во встроенном браузере — редиректим
+    if (!inAppBrowser) {
+      setTimeout(() => {
+        window.location.href = "https://beacons.ai/tg__gowero77";
+      }, 300);
     }
-    // Если в приложении — просто показываем картинку
   </script>
 </body>
 </html>
+
 
