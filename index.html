@@ -1,45 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Открытие...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
       background: #000;
-      color: #fff;
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+    img {
+      display: block;
+      width: 100vw;
       height: 100vh;
-      text-align: center;
-      padding: 20px;
-    }
-    .hint {
-      font-size: 20px;
-      line-height: 1.5;
-    }
-    .btn {
-      margin-top: 20px;
-      padding: 12px 24px;
-      font-size: 18px;
-      background-color: #fff;
-      color: #000;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      object-fit: contain;
     }
   </style>
 </head>
 <body>
-  <div class="hint" id="message">
-    👆 Нажми <b>⋮</b> или <b>«Аа»</b> вверху<br>
-    и выбери <b>«Открыть в браузере»</b>
-  </div>
-
-  <button class="btn" id="go" style="display: none;">Продолжить</button>
+  <img src="https://i.ibb.co/xSR4fjr/image.png" alt="" />
 
   <script>
     const redirectURL = "https://beacons.ai/tg__gowero77";
@@ -47,15 +29,12 @@
     const isInApp = /instagram|fbav|tiktok|webview|vk|okhttp|line|micromessenger|telegram/.test(ua);
 
     if (!isInApp) {
-      // если уже в браузере
-      document.getElementById("message").innerHTML = "Готово! Нажми кнопку ниже 👇";
-      document.getElementById("go").style.display = "inline-block";
-      document.getElementById("go").addEventListener("click", () => {
-        window.location.href = redirectURL;
-      });
+      // если открыто в браузере — редирект
+      window.location.href = redirectURL;
     }
   </script>
 </body>
 </html>
+
 
 
