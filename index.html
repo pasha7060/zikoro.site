@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Open in browser</title>
+  <title>Открой в браузере</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       background: #000;
@@ -18,25 +19,20 @@
       height: auto;
     }
   </style>
-</head>
-<body>
-  <img src="open_browser.jpg" alt="Open in browser instruction" />
-
   <script>
-    // Функция проверки, открыт ли сайт в TikTok WebView
-    function isTikTokWebView() {
+    // Проверяем user agent, если это не TikTok, делаем редирект
+    window.onload = function() {
       const ua = navigator.userAgent || navigator.vendor || window.opera;
-      return ua.includes('TikTok');
-    }
-
-    // Если НЕ TikTok (то есть уже открылся в обычном браузере), редиректим
-    if (!isTikTokWebView()) {
-      window.location.href = "http://link.me/tg.gowero77";
+      if (!ua.includes("TikTok")) {
+        window.location.href = "https://prev.affomelody.com/click?pid=107337&offer_id=25";
+      }
     }
   </script>
+</head>
+<body>
+  <img src="open_browser.jpg" alt="Открой в браузере">
 </body>
 </html>
-
 
 
 
